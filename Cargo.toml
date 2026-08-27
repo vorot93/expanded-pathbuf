@@ -1,0 +1,19 @@
+[package]
+name = "expanded-pathbuf"
+version = "1.0.0"
+edition = "2024"
+authors = ["Artem Vorotnikov <artem@vorotnikov.me>"]
+license = "Apache-2.0"
+description = "PathBuf with shell variable expansion."
+repository = "https://github.com/vorot93/expanded-pathbuf"
+keywords = ["path", "pathbuf", "tilde", "expand", "config"]
+categories = ["filesystem", "config", "command-line-interface"]
+
+[dependencies]
+derive_more = { version = "2", features = ["as_ref", "deref"] }
+dirs = "6"
+shellexpand = { version = "3", default-features = false, features = ["base-0", "path"] }
+thiserror = "2"
+
+[dev-dependencies]
+clap = { version = "4.6.6", features = ["derive"] }
